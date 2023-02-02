@@ -1,0 +1,35 @@
+﻿  conv.cpp
+C:\Users\hwan\source\repos\ConvTest\ConvTest\conv.cpp(48,7): warning C4554: '|': 연산자 우선 순위에 오류가 있는지 확인하세요. 괄호를 사용하여 우선 순위를 명확하게 지정하세요.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\conv.cpp(48,69): warning C4554: '|': 연산자 우선 순위에 오류가 있는지 확인하세요. 괄호를 사용하여 우선 순위를 명확하게 지정하세요.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\conv.cpp(122,7): warning C4554: '|': 연산자 우선 순위에 오류가 있는지 확인하세요. 괄호를 사용하여 우선 순위를 명확하게 지정하세요.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\conv.cpp(122,69): warning C4554: '|': 연산자 우선 순위에 오류가 있는지 확인하세요. 괄호를 사용하여 우선 순위를 명확하게 지정하세요.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\conv.cpp(197,7): warning C4554: '|': 연산자 우선 순위에 오류가 있는지 확인하세요. 괄호를 사용하여 우선 순위를 명확하게 지정하세요.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\conv.cpp(197,69): warning C4554: '|': 연산자 우선 순위에 오류가 있는지 확인하세요. 괄호를 사용하여 우선 순위를 명확하게 지정하세요.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\conv.cpp(340,85): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\conv.cpp(341,85): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\conv.cpp(343,19): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\conv.cpp(344,49): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\conv.cpp(355,89): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\conv.cpp(356,90): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\conv.cpp(357,60): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\conv.cpp(363,122): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\conv.cpp(347,12): warning C4101: 'p' :참조되지 않은 지역 변수입니다.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\conv.cpp(347,15): warning C4101: 'q' :참조되지 않은 지역 변수입니다.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\conv.cpp(347,9): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\conv.cpp(347,6): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+  main.cpp
+C:\Users\hwan\source\repos\ConvTest\ConvTest\main.cpp(232,38): warning C4244: '=': 'uint64_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\main.cpp(319,40): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\main.cpp(320,41): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\main.cpp(332,40): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\main.cpp(333,41): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\main.cpp(345,40): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\main.cpp(346,41): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\main.cpp(358,40): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\hwan\source\repos\ConvTest\ConvTest\main.cpp(359,41): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+  코드를 생성하고 있습니다.
+  20 of 89 functions (22.5%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  코드를 생성했습니다.
+  ConvTest.vcxproj -> C:\Users\hwan\source\repos\ConvTest\x64\Release\ConvTest.exe
