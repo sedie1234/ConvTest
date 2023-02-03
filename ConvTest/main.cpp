@@ -47,10 +47,10 @@ int main(void) {
 
 	
 	//CamOn();
-	ShowTheImage(TESTIMG);
-	ShowTheGrayImage(TESTIMG);
-	FindEdge(TESTIMG);
-	//Test_8();
+	//ShowTheImage(TESTIMG);
+	//ShowTheGrayImage(TESTIMG);
+	//FindEdge(TESTIMG);
+	Test_8();
 	//FilterSplit8();
 }
 
@@ -214,7 +214,9 @@ void Test_8() {
 	uint64_t* result = (uint64_t*)malloc(outsize_row * outsize_col * sizeof(uint64_t));
 	memset(result, 0, outsize_row * outsize_col * sizeof(uint64_t));
 	Mat outimg(outsize_row, outsize_col, 0);
+	Mat outcolorimg(outsize_row, outsize_col, CV_8UC3);
 	uchar* out_data = outimg.data;
+	uchar* out_color_data = outcolorimg.data;
 
 	Conv2D_int64((int8_t*)grayimg.data, (int8_t*)filter.data, (uint64_t*)result, grayimg.rows, grayimg.cols,
 			filter.rows, stridex, stridey, pad);
@@ -229,6 +231,9 @@ void Test_8() {
 			/*#2 score view*/
 			if (result[outsize_col * i + j] < 255*255*filter.rows*filter.rows && result[outsize_col * i + j] > THRESHOLD) {
 				out_data[outsize_col * i + j] = 255;
+				out_color_data[3 * (outsize_col * i + j)] = 255;
+				out_color_data[3 * (outsize_col * i + j) + 1] = 255;
+				out_color_data[3 * (outsize_col * i + j) + 2] = 255;
 				if (result[outsize_col * i + j] > max) {
 					max = result[outsize_col * i + j];
 					maxx = j;
@@ -241,7 +246,7 @@ void Test_8() {
 		cout << max << " (" << maxx << ", " << maxy << ")" << endl;
 		
 		rectangle(img, Point(maxx - filter.rows/2, maxy - filter.rows/2), Point(maxx + filter.rows/2 + filter.rows%2, maxy + filter.rows/2 + filter.rows%2), Scalar(255, 255, 0), 1, 8, 0);
-		circle(outimg, Point(maxx - filter.rows / 2, maxy - filter.rows / 2), 3, Scalar(255, 255, 0), -1);
+		circle(outcolorimg, Point(maxx /* - filter.rows / 2*/, maxy /* - filter.rows / 2*/), 3, Scalar(255, 255, 0), -1);
 	}
 	else {
 		cout << "not found" << endl;
@@ -252,7 +257,7 @@ void Test_8() {
 
 	imshow("test img 8", img);
 	imshow("filter 8", filter);
-	imshow("Conv result 8", outimg);
+	imshow("Conv result 8", outcolorimg);
 
 	waitKey(0);
 	free(result);
