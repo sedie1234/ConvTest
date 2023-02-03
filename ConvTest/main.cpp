@@ -49,8 +49,8 @@ int main(void) {
 	//CamOn();
 	//ShowTheImage(TESTIMG);
 	//ShowTheGrayImage(TESTIMG);
-	//FindEdge(TESTIMG);
-	Test_8();
+	FindEdge(TESTIMG);
+	//Test_8();
 	//FilterSplit8();
 }
 
@@ -189,7 +189,20 @@ void FindEdge(string filename) {
 	Conv2D((int8_t*)grayimg.data, (int8_t*)filter.data, (int8_t*)result.data, grayimg.rows, grayimg.cols,
 		3, 1, 1, 1);
 #endif
+#if (FILTER == 3)
+	filter_data[0] = -1;
+	filter_data[1] = -1;
+	filter_data[2] = -1;
+	filter_data[3] = -1;
+	filter_data[4] = 8;
+	filter_data[5] = -1;
+	filter_data[6] = -1;
+	filter_data[7] = -1;
+	filter_data[8] = -1;
 
+	Conv2D((int8_t*)grayimg.data, (int8_t*)filter.data, (int8_t*)result.data, grayimg.rows, grayimg.cols,
+		3, 1, 1, 1);
+#endif
 
 	imshow("Find Edge", result);
 	waitKey(0);

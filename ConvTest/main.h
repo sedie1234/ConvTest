@@ -1,11 +1,11 @@
 #pragma once
 
 #define THRESHOLD	1000
-#define FILTER		1
+#define FILTER		3
 //for function TEST_8
 //#define TESTIMG		"img.jpg"
-#define TESTIMG		"testimg.jfif"
-//#define TESTIMG		"rena.jfif"
+//#define TESTIMG		"testimg.jfif"
+#define TESTIMG		"rena.jfif"
 #define TESTIMG8	"8_test1.bmp"
 #define FILTER8		"8_filter.bmp"
 
