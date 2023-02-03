@@ -47,10 +47,10 @@ int main(void) {
 
 	
 	//CamOn();
-	//ShowTheImage(TESTIMG);
-	//ShowTheGrayImage(TESTIMG);
-	//FindEdge(TESTIMG);
-	Test_8();
+	ShowTheImage(TESTIMG);
+	ShowTheGrayImage(TESTIMG);
+	FindEdge(TESTIMG);
+	//Test_8();
 	//FilterSplit8();
 }
 
@@ -101,6 +101,7 @@ void FindEdge(string filename) {
 	Mat grayimg;
 	
 	cvtColor(colorimg, grayimg, COLOR_BGR2GRAY);
+	GaussianBlur(grayimg, grayimg, Size(3, 3), 0);
 	Mat result(grayimg.rows, grayimg.cols, 0);
 	Mat result1(grayimg.rows, grayimg.cols, 0);
 	Mat filter(3, 3, 0);
