@@ -49,8 +49,8 @@ int main(void) {
 	//CamOn();
 	//ShowTheImage(TESTIMG);
 	//ShowTheGrayImage(TESTIMG);
-	FindEdge(TESTIMG);
-	//Test_8();
+	//FindEdge(TESTIMG);
+	Test_8();
 	//FilterSplit8();
 }
 
@@ -217,7 +217,10 @@ void Test_8() {
 	Mat grayimg;
 	cvtColor(img, grayimg, COLOR_BGR2GRAY);
 	cvtColor(filter, filter, COLOR_BGR2GRAY);
-
+#if MULTIFIND
+	Point coordinate[300];
+	int coordinate_cnt=0;
+#endif
 	int pad = (filter.rows - filter.rows%2) / 2;
 	int stridex = 1;
 	int stridey = 1;
@@ -243,6 +246,10 @@ void Test_8() {
 		for (int j = 0; j < outsize_col; j++) {
 			/*#2 score view*/
 			if (result[outsize_col * i + j] < 255*255*filter.rows*filter.rows && result[outsize_col * i + j] > THRESHOLD) {
+#if MULTIFIND
+				coordinate[coordinate_cnt] = Point(j, i);
+				rectangle(img, Point(j - filter.rows / 2, i - filter.rows / 2), Point(j + filter.rows / 2 + filter.rows % 2, i + filter.rows / 2 + filter.rows % 2), Scalar(0, 255, 255), 1, 8, 0);
+#endif
 				out_data[outsize_col * i + j] = 255;
 				out_color_data[3 * (outsize_col * i + j)] = 255;
 				out_color_data[3 * (outsize_col * i + j) + 1] = 255;

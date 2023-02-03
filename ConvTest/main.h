@@ -1,6 +1,6 @@
 #pragma once
 
-#define THRESHOLD	1000
+#define THRESHOLD	60000 //50000,60000 : good for multifind // 100000 : good for small find
 #define FILTER		3
 //for function TEST_8
 //#define TESTIMG		"img.jpg"
@@ -8,6 +8,7 @@
 #define TESTIMG		"rena.jfif"
 #define TESTIMG8	"8_test1.bmp"
 #define FILTER8		"8_filter.bmp"
+#define MULTIFIND	1
 
 //for funtion FilterSplit
 #define SFILTER1	"8_filter_1.png"
